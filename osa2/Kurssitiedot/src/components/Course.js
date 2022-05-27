@@ -6,7 +6,7 @@ const Header = ({ name }) => {
   
   const Parts = ({ parts }) => {
     return (
-      <li>{parts.name} {parts.exercises}</li>
+      <div>{parts.name} {parts.exercises}</div>
     )
   }
   
@@ -23,11 +23,9 @@ const Header = ({ name }) => {
     return (
       <div>
         <Header name={course.name} />
-        <ul>
           {parts.map(parts =>
             <Parts key={parts.id} parts={parts} />
           )}
-        </ul>
         <Sum parts={parts} />
       </div>
     )
